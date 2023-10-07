@@ -9,6 +9,15 @@
     Redireccionando...
   </body>
   <script>
-    window.location.assign('camionapp://passwordRecovery?token=111111')
+    // Obtener la URL actual
+    var url = new URL(window.location.href)
+
+    // Obtener los parámetros de la URL
+    var params = new URLSearchParams(url.search)
+
+    // Obtener el valor del parámetro "token"
+    var token = params.get('token')
+
+    window.location.assign(`camionapp://passwordRecovery?token=${token}`)
   </script>
 </html>
