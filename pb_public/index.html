@@ -18,6 +18,8 @@
     // Obtener el valor del parámetro "token"
     var token = params.get('token')
 
-    window.location.assign(`camionapp://passwordRecovery?token=${token}`)
+    window.location.assign(
+      `multicargas-chofer://passwordRecovery?token=${token}`
+    )
   </script>
 </html>
