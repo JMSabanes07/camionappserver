@@ -17,9 +17,12 @@
 
     // Obtener el valor del parámetro "token"
     var token = params.get('token')
+    var app = params.get('app')
 
     window.location.assign(
-      `multicargas-chofer://passwordRecovery?token=${token}`
+      `${
+        app === 'Chofer' ? 'multicargas-chofer' : 'multicargas-vendedor'
+      }://passwordRecovery?token=${token}`
     )
   </script>
 </html>
